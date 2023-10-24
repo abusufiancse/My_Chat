@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -27,8 +25,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   _handleGoogleBtnClick() {
     _signInWithGoogle().then((user) {
-      log('\nUser: ${user.user}' as num);
-      log('\nUserCredential: ${user.credential}' as num);
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
